@@ -54,6 +54,13 @@
 			<version>1.10.19</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.pitest/pitest -->
+		<dependency>
+			<groupId>org.pitest</groupId>
+			<artifactId>pitest</artifactId>
+			<version>1.6.6</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -76,6 +83,27 @@
 				</executions>
 				<configuration>
 					<destFile>${sonar.jacoco.reportPath}</destFile>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<configuration>
+					<targetClasses>
+						<param>br.ce.wcaquino.taskbackend.utils.DateUtils</param>
+						<param>br.ce.wcaquino.taskbackend.controller.TaskController</param>
+					</targetClasses>
+					<targetTests>
+						<param>br.ce.wcaquino.taskbackend</param>
+					</targetTests>
+					<mutationThreshold>0</mutationThreshold>
+					<mutators>
+						<mutator>ALL</mutator>
+					</mutators>
+					<outputFormats>
+						<value>XML</value>
+						<value>HTML</value>
+					</outputFormats>
 				</configuration>
 			</plugin>
 		</plugins>
