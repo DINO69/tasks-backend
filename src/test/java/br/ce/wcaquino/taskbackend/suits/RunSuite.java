@@ -8,5 +8,5 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({DateUtilsTest.class, TaskControllerTest.class})
-public class RunAllTest {
+public class RunSuite {
 }
