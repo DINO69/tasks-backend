@@ -60,6 +60,20 @@
 			<artifactId>pitest</artifactId>
 			<version>1.6.6</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4 -->
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>1.6.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>1.6.4</version>
+			<scope>test</scope>
+		</dependency>
+
 
 	</dependencies>
 
@@ -94,12 +108,12 @@
 						<param>br.ce.wcaquino.taskbackend.controller.TaskController</param>
 					</targetClasses>
 					<targetTests>
-						<param>br.ce.wcaquino.taskbackend</param>
+						<param>br.ce.wcaquino.taskbackend.*</param>
 					</targetTests>
-					<mutationThreshold>0</mutationThreshold>
-					<mutators>
-						<mutator>ALL</mutator>
-					</mutators>
+					<mutationThreshold>33</mutationThreshold>
+<!--					<mutators>-->
+<!--						<mutator>ALL</mutator>-->
+<!--					</mutators>-->
 					<outputFormats>
 						<value>XML</value>
 						<value>HTML</value>
