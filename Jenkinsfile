@@ -2,17 +2,21 @@ pipeline{
     agent any
     stages{
         stage("Check Projeto"){
-            echo "Check Projeto"
+            steps {
+                echo "Check Projeto"
+            }
         }
         stage("Check Projeto"){
-            echo "Check Projeto"
+            steps {
+                echo "Check Projeto"
+            }
         }
     }
     post{
         always{
             echo "Check always"
         }
-        sucess{
+        success{
             echo "Post - Sucess"
         }
         failure{
