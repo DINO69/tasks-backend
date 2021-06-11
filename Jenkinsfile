@@ -13,8 +13,9 @@ pipeline{
         }
         stage("Maven Build Projeto"){
             steps {
-                withMaven() {
+                withMaven(
                     maven: 'MAVEN_LOCAL'
+                ) {
                     bat "mvn clean package -DskipTest"
                 }
             }
