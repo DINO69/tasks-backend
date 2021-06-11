@@ -6,9 +6,9 @@ pipeline{
                 echo "Check Projeto"
             }
         }
-        stage("Check Projeto"){
+        stage("Test Projeto"){
             steps {
-                echo "Check Projeto"
+                echo "Test Projeto"
             }
         }
     }
