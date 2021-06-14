@@ -33,4 +33,9 @@ public class DataUtilStep {
         Assert.assertFalse(DateUtils.isEqualOrFutureDate(dateParam,hoje));
     }
 
+    @Then("data maior( ou igual)")
+    public void dataMaior() {
+        Assert.assertTrue(DateUtils.isEqualOrFutureDate(dateParam,hoje));
+    }
+
 }
